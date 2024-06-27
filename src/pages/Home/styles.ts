@@ -20,15 +20,6 @@ export const FilterDiv = styled.div`
     margin-top: 25px;
     justify-content: space-around;
 `;
-export const FilterItem = styled.div`
-    display: flex;
-    gap: 10px;
-
-    h1{
-        font-size: 20px;
-    }
-`;
-
 
 export const FilterByMonthDiv = styled.div`
     display: flex;
