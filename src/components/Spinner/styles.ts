@@ -1,4 +1,3 @@
-// Spinner.tsx
 import styled, { keyframes } from 'styled-components';
 
 const rotate = keyframes`

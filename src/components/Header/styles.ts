@@ -6,7 +6,7 @@ export const Container = styled.div`
   width: 100%;
   padding: 20px;
   gap: 20px;
-  background-color: #358eac;
+  background-color: ${(props) => props.theme.colors['blue-650']};
   background-image: linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
                     linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
                     linear-gradient(rgba(255, 255, 255, 0.1) 2px, transparent 2px),
@@ -23,6 +23,7 @@ export const UserDiv = styled.div`
         margin-left: 10px;
         font-weight: normal;
         color: ${(props) => props.theme.colors['white']};
+        font-size: ${(props) => props.theme.fontSizes['text']};
     }
 `;
 
@@ -42,5 +43,6 @@ export const TitleDiv = styled.div`
     h1{
         font-weight: bold;
         color: ${(props) => props.theme.colors['white']};
+        font-size: ${(props) => props.theme.fontSizes['title2x']};
     }
 `;

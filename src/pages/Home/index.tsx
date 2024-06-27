@@ -1,8 +1,6 @@
-/* import { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; */
-
 import { useEffect, useMemo, useState } from 'react';
 import { BarChart } from '@mui/x-charts/BarChart';
+import { Button } from '@mui/material';
 
 import { Container, Content, FilterByMonthDiv, FilterByMonthItem, FilterByMonthItemSelect, FilterDiv, GraphicDiv } from './styles';
 import { SalesReportInterface } from '../../dtos/SalesReportInterface';
@@ -11,7 +9,6 @@ import { Spinner } from '../../components/Spinner/indes';
 import useApi from '../../hooks/useApi';
 import { useNavigate } from 'react-router-dom';
 import FilterItem from '../../components/FilterItem';
-import { Button } from '@mui/material';
 
 
 export const Home = () => {
@@ -130,11 +127,6 @@ export const Home = () => {
                                     id: 'barCategories',
                                     data: dataForChart.map(entry => entry.month),
                                     scaleType: 'band',
-                                    /* colorMap: {
-                                        type: 'piecewise',
-                                        thresholds: [5350, new Date(2023, 1, 1), 3333, 3322],
-                                        colors: ['red', 'blue', 'blue', 'blue'],
-                                    } */
                                 },
                             ]}
 

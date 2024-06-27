@@ -32,7 +32,7 @@ export const FilterByMonthItem = styled.div`
     gap: 10px;
 
     h1{
-        font-size: 20px;
+        font-size: ${(props) => props.theme.fontSizes['title']};
     }
 `;
 export const FilterByMonthItemSelect = styled.div`
@@ -42,7 +42,7 @@ export const FilterByMonthItemSelect = styled.div`
 
     margin-top: 20px;
     h1{
-        font-size: 16px;
+        font-size: ${(props) => props.theme.fontSizes['text']};
     }
 `;
 
