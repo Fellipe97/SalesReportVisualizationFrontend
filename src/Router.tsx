@@ -13,7 +13,10 @@ export function Router() {
             />
 
             <Route path="*"
-                element={<Home />}
+                element={<Home />}   
+                /* Forçando que todas as rotas digitadas levem ao componente Home, támbem poderia criar uma
+                    página(componente) que fale que escreveu a rota invalida e levasse para Home
+                */
             />
         </Routes>
     )
