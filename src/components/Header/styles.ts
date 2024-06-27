@@ -2,18 +2,18 @@ import styled from 'styled-components';
 
 
 export const Container = styled.div`
-    display: flex;
-    width: 100%;
-    padding: 20px;
-    gap: 20px;
-    background-color: #358eac;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
-                      linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
-                      linear-gradient(rgba(255, 255, 255, 0.1) 2px, transparent 2px),
-                      linear-gradient(90deg, rgba(255, 255, 255, 0.1) 2px, transparent 2px);
-    background-size: 20px 20px, 20px 20px, 10px 10px, 10px 10px;
-    background-position: 0 0, 0 0, 0 1px, 1px 0;
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  display: flex;
+  width: 100%;
+  padding: 20px;
+  gap: 20px;
+  background-color: #358eac;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+                    linear-gradient(rgba(255, 255, 255, 0.1) 2px, transparent 2px),
+                    linear-gradient(90deg, rgba(255, 255, 255, 0.1) 2px, transparent 2px);
+  background-size: 20px 20px, 20px 20px, 10px 10px, 10px 10px;
+  background-position: 0 0, 0 0, 0 1px, 1px 0;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 `;
 
 export const UserDiv = styled.div`
