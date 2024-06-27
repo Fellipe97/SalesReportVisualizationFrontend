@@ -39,18 +39,17 @@ export const Home = () => {
     const uniqueBrands = useMemo(() => [...new Set(filteredData.map(data => data.brand))], [filteredData]);
 
     const months = ['January', 'February', 'March', 'April'];
-    const monthColors = ['#3498db', '#2ecc71', '#f1c40f', '#e67e22'];
 
     const dataForChart = useMemo(() => {
         if (monthFiltered) {
             return months.map((month) => ({
                 month: month,
-                sales: monthFiltered === month ? filteredData.reduce((total, current) => total + current[month], 0) : 0
+                sales: monthFiltered === month ? filteredData.reduce((total, current) => total + (current[month as keyof SalesReportInterface] as number), 0) : 0
             }));
         } else {
             return months.map((month) => ({
                 month: month,
-                sales: filteredData.reduce((total, current) => total + current[month], 0)
+                sales: filteredData.reduce((total, current) => total + total + (current[month as keyof SalesReportInterface] as number), 0)
             }));
         }
     }, [filteredData, monthFiltered]);
