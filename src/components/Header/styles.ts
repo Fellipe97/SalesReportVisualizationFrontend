@@ -38,6 +38,7 @@ export const TitleDiv = styled.div`
     justify-content: center;
     align-items: center;
     flex: 1;
+
     h1{
         font-weight: bold;
         color: ${(props) => props.theme.colors['white']};
