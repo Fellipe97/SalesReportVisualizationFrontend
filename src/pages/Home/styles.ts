@@ -34,6 +34,12 @@ export const FilterByMonthItem = styled.div`
     h1{
         font-size: ${(props) => props.theme.fontSizes['title']};
     }
+
+    @media (max-width: 600px) {
+        h1{
+            font-size: 12px;
+        }
+    }
 `;
 export const FilterByMonthItemSelect = styled.div`
     display: flex;
@@ -43,6 +49,10 @@ export const FilterByMonthItemSelect = styled.div`
     margin-top: 20px;
     h1{
         font-size: ${(props) => props.theme.fontSizes['text']};
+    }
+    @media (max-width: 600px) {
+        gap: 10px;
+        flex-direction: column;
     }
 `;
 

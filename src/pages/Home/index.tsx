@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useState, useLayoutEffect } from 'react';
 import { BarChart } from '@mui/x-charts/BarChart';
 import { Button } from '@mui/material';
 
@@ -14,7 +14,9 @@ import FilterItem from '../../components/FilterItem';
 export const Home = () => {
     const navigate = useNavigate();
     const api = useApi();
-    const [loading, setLoading] = useState(true)
+    const [loading, setLoading] = useState(true);
+    const [chartSize, setChartSize] = useState({ width: 800, height: 500 });
+
 
     const [graphicData, setGraphicData] = useState<SalesReportInterface[]>([])
 
@@ -71,6 +73,20 @@ export const Home = () => {
         }
         handleDataGraphic()
     }, [])
+
+    useLayoutEffect(() => {
+        function updateSize() {
+            const width = window.innerWidth;
+            if (width < 600) { 
+                setChartSize({ width: width, height: 300 }); 
+            } else {
+                setChartSize({ width: 800, height: 500 });
+            }
+        }
+        window.addEventListener('resize', updateSize);
+        updateSize(); // Chama ao montar
+        return () => window.removeEventListener('resize', updateSize);
+    }, []);
 
 
     return (
@@ -140,8 +156,8 @@ export const Home = () => {
                                 return context.bar.height < 60 ? null : item.value?.toString();
                             }}
 
-                            width={800}
-                            height={500}
+                            width={chartSize.width}
+                            height={chartSize.height}
                         />
                     }
 

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
-  width: 100%;
+  width: 100vw;
   padding: 20px;
   gap: 20px;
   background-color: ${(props) => props.theme.colors['blue-650']};
@@ -14,6 +14,7 @@ export const Container = styled.div`
   background-size: 20px 20px, 20px 20px, 10px 10px, 10px 10px;
   background-position: 0 0, 0 0, 0 1px, 1px 0;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
 `;
 
 export const UserDiv = styled.div`

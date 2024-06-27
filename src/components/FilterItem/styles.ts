@@ -15,4 +15,14 @@ export const FilterItemContainer = styled.div`
         padding: 15px;
         width: 200px;
     }
+    @media (max-width: 600px) {
+        h1 {
+            font-size: 12px;
+        }
+        select{
+            padding: 5px;
+            width: 100px;
+        }
+        flex-direction: column;
+    }
 `;
